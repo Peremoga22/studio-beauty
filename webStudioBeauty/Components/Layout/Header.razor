@@ -1,25 +1,25 @@
 ﻿<!-- Topbar Start -->
 <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-    <div class="row gx-0 align-items-center" style="height: 45px;">
-        <div class="col-lg-8 text-center text-lg-start">
+    <div class="row gx-0 align-items-center text-white small" style="height: 45px;">
+        <div class="col-lg-8 text-start">
             <div class="d-flex flex-wrap">
-                <a href="https://maps.app.goo.gl/S5UGHhxQ6fssKRFM7" class="text-light me-4 d-flex align-items-center">
-                    <i class="fas fa-map-marker-alt text-primary me-2"></i>Знайти нас на локації
+                <a href="https://maps.app.goo.gl/S5UGHhxQ6fssKRFM7" class="text-light me-4 text-decoration-none">
+                    <i class="fas fa-map-marker-alt text-primary me-2"></i>Івано-Франківськ, вул. Кармелюка, 30
                 </a>
-                <a href="tel:+380930901111" class="text-light me-4 d-flex align-items-center">
+                <a href="tel:+380669052664" class="text-light me-4 text-decoration-none">
                     <i class="fas fa-phone-alt text-primary me-2"></i>+380669052664
                 </a>
-                <a href="mailto:shine.cosmetologybyzelinska@gmail.com" class="text-light d-flex align-items-center">
+                <a href="mailto:shine.cosmetologybyzelinska@gmail.com" class="text-light text-decoration-none">
                     <i class="fas fa-envelope text-primary me-2"></i>shine.cosmetologybyzelinska@gmail.com
                 </a>
             </div>
         </div>
-        <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-flex align-items-center justify-content-end">
-                <a href="#" class="btn btn-light btn-sm btn-square rounded-circle me-2">
+        <div class="col-lg-4 text-end">
+            <div class="d-flex justify-content-end">
+                <a href="https://facebook.com" target="_blank" class="btn btn-light btn-sm rounded-circle me-2">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/shinee.cosmetology?igsh=MXRuY3ZrNHNuOTFqNQ==" class="btn btn-light btn-sm btn-square rounded-circle">
+                <a href="https://instagram.com/shinee.cosmetology" target="_blank" class="btn btn-light btn-sm rounded-circle">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -27,33 +27,42 @@
     </div>
 </div>
 <!-- Topbar End -->
-<!-- Navbar Start -->
+
 <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 px-lg-5 py-3">
+        <!-- Logo -->
         <a href="/" class="navbar-brand d-flex align-items-center gap-2">
-            <img src="img/logo2.jpeg" alt="Logo" style="height: 40px;">
-            <span class="text-primary fs-4 fw-bold">Студія краси</span>
+            <img src="img/logo2.jpeg" alt="Логотип" class="rounded-circle shadow-sm" style="height: 48px; width: 48px; object-fit: cover;">
+            <span class="text-primary fs-4 fw-bold">SHINE Studio</span>
         </a>
-        <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navigation -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-                <a href="/" class="nav-item nav-link active">Домашня сторінка</a>
-                <a href="/about-us" class="nav-item nav-link">Про нас</a>
-                <a href="/cosmetology" class="nav-item nav-link">Наші послуги</a>
-            </div>
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item">
+                <NavLink href="/" class="nav-link" Match="NavLinkMatch.All" activeClass="active">
+                    Домашня
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink href="/about-us" class="nav-link" activeClass="active">
+                    Про нас
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink href="/cosmetology" class="nav-link" activeClass="active">
+                    Послуги
+                </NavLink>
+            </li>
+          </ul>
+
         </div>
     </nav>
 </div>
-<!-- Navbar End -->
-@code {
-    private bool collapseNavMenu = false;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
