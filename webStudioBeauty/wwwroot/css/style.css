@@ -1,4 +1,10 @@
-
+:root {
+    --bs-primary: #ff4fa3; 
+    --bs-primary-rgb: 255, 79, 163;
+    --bs-primary-bg-subtle: #ffe0f0;
+    --bs-primary-border-subtle: #ff99ca;
+    --bs-primary-text: #4d0024; 
+}
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -211,7 +217,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-primary) !important;
+    color: #f8b7d8 !important;
 }
 
 .navbar-light .navbar-brand img {

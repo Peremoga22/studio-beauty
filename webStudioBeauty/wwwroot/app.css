@@ -3,13 +3,13 @@ html, body {
 }
 
 a, .btn-link {
-    color: #006bb7;
+    color: #f8b7d8 !important;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: #f8b7d8 !important;
+    border-color: #f8b7d8 !important;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -58,3 +58,11 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/*.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+    color: #f8b7d8 !important;
+}
+.navbar-nav .nav-link {
+    color: #f8b7d8 !important;
+}*/
